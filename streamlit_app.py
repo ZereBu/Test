@@ -7,7 +7,7 @@ st.title("🔎 Explora tus datos con PyGWalker")
 
 # 1️⃣ List of CSV files in your GitHub repo
 csv_files = {
-    "Amongus": "https://raw.githubusercontent.com/ZereBu/Test/blob/main/amogus%20(2)%20(1)%20(1).xlsx",
+    "Amongus":"https://raw.githubusercontent.com/ZereBu/Test/blob/main/amogus%20(2)%20(1)%20(1).xlsx",
     "Kpop": "https://raw.githubusercontent.comZereBu/Test/blob/main/kpop%20(1).xlsx",
     "Pkmn": "https://raw.githubusercontent.com/ZereBu/Test/blob/main/Pokemon.csv",
     "Data": "https://raw.githubusercontent.com/ZereBu/Test/blob/main/data.csv"
