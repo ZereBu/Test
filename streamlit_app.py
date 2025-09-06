@@ -18,10 +18,10 @@ selected_csv = st.selectbox("Elige un dataset", list(csv_files.keys()))
 
 # 3️⃣ Show custom text/questions for each CSV
 custom_texts = {
-    Amongus": " Observa las especies de pingüino y su tamaño de aletas. ¿Cuál especie tiende a tener aletas más largas?",
-    "Kpop": " Analiza la supervivencia según clase y género. ¿Qué grupo tuvo mayor supervivencia?",
-    "Pkmn": " Observa las ventas por región y producto. ¿Cuál producto es más vendido?",
-    "Data": " Observa las medidas de las flores. ¿Qué especie tiene sépalos más largos en general?"
+    Amongus": " Observa las especies de pingüino y su tamaño de aletas. Cuál especie tiende a tener aletas más largas?",
+    "Kpop": " Analiza la supervivencia según clase y género. ¿ué grupo tuvo mayor supervivencia?",
+    "Pkmn": " Observa las ventas por región y producto. ¿uál producto es más vendido?",
+    "Data": " Observa las medidas de las flores. Qué especie tiene sépalos más largos en general?"
 }
 
 st.write(custom_texts[selected_csv])
