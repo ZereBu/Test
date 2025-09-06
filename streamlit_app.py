@@ -18,7 +18,6 @@ selected_csv = st.selectbox("Elige un dataset", list(csv_files.keys()))
 
 # 3️⃣ Show custom text/questions for each CSV
 
-st.write(custom_texts[selected_csv])
 
 # 4️⃣ Load the selected CSV
 df = pd.read_csv(csv_files[selected_csv])
