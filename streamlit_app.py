@@ -1,16 +1,33 @@
 import streamlit as st
-from pygwalker.api.streamlit import StreamlitRenderer
 import pandas as pd
+from pygwalker.api.streamlit import StreamlitRenderer
 
-st.set_page_config(layout="wide")
-st.title("Explora tus datos con PyGWalker (tamaño personalizado)")
+# Set wide layout
+st.set_page_config(page_title="Pygwalker App", layout="wide")
+st.title("🔎 Explora tus datos con Pygwalker")
 
-uploaded = st.file_uploader("Sube un archivo CSV o Excel", type=["csv","xlsx"])
-if uploaded:
-    df = pd.read_csv(uploaded) if uploaded.name.endswith(".csv") else pd.read_excel(uploaded)
+# File uploader
+uploaded_file = st.file_uploader("Sube un archivo CSV o Excel", type=["csv", "xlsx"])
+
+if uploaded_file:
+    # Load dataset
+    if uploaded_file.name.endswith(".csv"):
+        df = pd.read_csv(uploaded_file)
+    else:
+        df = pd.read_excel(uploaded_file)
+
+    st.write("### 👀 Vista previa del conjunto de datos")
     st.dataframe(df.head())
 
+    # Add a manual reset button
+    if st.button("🔄 Reiniciar explorador"):
+        if "pygwalker_state" in st.session_state:
+            del st.session_state["pygwalker_state"]
+
+    st.write("### 📊 Explorador interactivo")
     renderer = StreamlitRenderer(df)
-    renderer.explorer(width=1200, height=800, scrolling=True)
+    # Only pass height — safe for all versions
+    renderer.explorer(height=800)
+
 else:
-    st.info("⬆️ Sube un archivo para comenzar")
+    st.info("⬆️ Sube un archivo CSV o Excel para comenzar a explorar")
