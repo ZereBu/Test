@@ -31,7 +31,7 @@ try:
     # 4️⃣ Pygwalker explorer
     st.write("### 📊 Explorador interactivo")
     renderer = StreamlitRenderer(df)
-    renderer.explorer(height=800)
+    renderer.explorer()
 
     # 5️⃣ Optional reset button
     if st.button("🔄 Reiniciar explorador"):
