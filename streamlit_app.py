@@ -7,10 +7,10 @@ st.title("🔎 Explora tus datos con PyGWalker")
 
 # 1️⃣ List of CSV files in your GitHub repo
 csv_files = {
-    "Amongus": "https://github.com/ZereBu/Test/blob/main/amogus%20(2)%20(1)%20(1).xlsx",
-    "Kpop": "https://github.com/ZereBu/Test/blob/main/kpop%20(1).xlsx",
-    "Pkmn": "https://github.com/ZereBu/Test/blob/main/Pokemon.csv",
-    "Data": "https://github.com/ZereBu/Test/blob/main/data.csv"
+    "Amongus": "https://raw.github.com/ZereBu/Test/blob/main/amogus%20(2)%20(1)%20(1).xlsx",
+    "Kpop": "https://raw.github.com/ZereBu/Test/blob/main/kpop%20(1).xlsx",
+    "Pkmn": "https://raw.github.com/ZereBu/Test/blob/main/Pokemon.csv",
+    "Data": "https://raw.github.com/ZereBu/Test/blob/main/data.csv"
 }
 
 # 2️⃣ User selects which CSV to explore
